@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xyz</title>
     <style>
-        .navbar{
+        .navbar {
             display: flex;
             background-color: yellow;
             height: 70px;
@@ -14,19 +14,90 @@
             justify-content: center;
             gap: 10px;
             padding: 0px 10px 0px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .top{
+
+        .top {
             display: flex;
             justify-content: space-between;
         }
-        .bottom{
+
+        .bottom {
             display: flex;
             justify-content: space-between;
         }
-        .searchbar{
+
+        .searchbar {
             display: flex;
-            
+
         }
+
+        /* This is css for main display slide show */
+        .display {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .move {
+            display: flex;
+            height: 510px;
+            animation: disani 35s linear infinite;
+        }
+
+        @keyframes disani {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        /* This is for the main content */
+        .mainccontent {
+            display: flex;
+
+            width: 100%;
+        }
+
+        .content {
+            display: flex;
+            height: 250px;
+            background-color: paleturquoise;
+            flex-direction: column;
+        }
+
+        .separater {
+            width: 100%;
+            height: 20px;
+        }
+
+        .up{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .b2{
+            width: 35%;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .b1{
+            width: 25%;
+            height: 180px;
+            background-color: aliceblue;
+
+        }
+        .b1:first-child{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
     </style>
 </head>
 
@@ -69,6 +140,62 @@
                 </div>
             </div>
 
+        </div>
+        <div class="display">
+            <div class="move">
+                <div class="disitem"><img src="dummy/WhatsApp Image 2025-04-12 at 21.49.58.jpeg" alt=""></div>
+                <div class="disitem"><img src="dummy/WhatsApp Image 2025-04-12 at 21.50.11.jpeg" alt=""></div>
+                <div class="disitem"><img src="dummy/WhatsApp Image 2025-04-12 at 21.50.39.jpeg" alt=""></div>
+                <div class="disitem"><img src="dummy/WhatsApp Image 2025-04-12 at 21.50.57.jpeg" alt=""></div>
+                <div class="disitem"><img src="dummy/WhatsApp Image 2025-04-12 at 21.51.48.jpeg" alt=""></div>
+            </div>
+        </div>
+        <div class="separater"></div>
+        <div class="maincontent">
+            <div class="content">
+                <div class="up">
+                    <div class="b1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facere cum! Eos quod fuga, velit ullam minus iste aut! Aliquid!</p></div>
+                    <div class="b2"> <img src="dummy/dumb/image.png" alt=""> </div>
+                </div>
+                <div class="dw"><button class="navi">Show Details> </button></div>
+            </div>
+            <div class="separater"></div>
+            <div class="content">
+                <div class="up">
+                    <div class="b2"> <img src="dummy/dumb/istockphoto-512150982-612x612.jpg" alt=""> </div>
+                    <div class="b1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facere cum! Eos quod fuga, velit ullam minus iste aut! Aliquid!</p></div>
+                </div>
+                <div class="dw"><button class="navi">Show Details> </button></div>
+            </div>
+            <div class="separater"></div>
+            <div class="content">
+                <div class="up">
+                    <div class="b1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facere cum! Eos quod fuga, velit ullam minus iste aut! Aliquid!</p></div>
+                    <div class="b2"> <img src="dummy/dumb/istockphoto-598058914-612x612.jpg" alt=""> </div>
+                </div>
+                <div class="dw"><button class="navi">Show Details> </button></div>
+            </div>
+            <div class="separater"></div>
+            <div class="content">
+                <div class="up">
+                    <div class="b2"> <img
+                            src="dummy/dumb/romantic-tunnel-pink-flower-trees-falling-petal-over-blossom-tree-over-nature-background-spring-season-flowers-93135462.webp"
+                            alt=""> </div>
+                    <div class="b1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facere cum! Eos quod fuga, velit ullam minus iste aut! Aliquid!</p></div>
+                </div>
+                <div class="dw"><button class="navi">Show Details> </button></div>
+            </div>
+            <div class="separater"></div>
+            <div class="content">
+                <div class="up">
+                    <div class="b1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facere cum! Eos quod fuga, velit ullam minus iste aut! Aliquid!</p></div>
+                    <div class="b2"> <img
+                            src="dummy/dumb/tree-branches-with-white-flowers-and-bright-background-free-photo.jpg"
+                            alt=""> </div>
+                </div>
+                <div class="dw"><button class="navi">Show Details> </button></div>
+            </div>
+            <div class="separater"></div>
         </div>
     </div>
 </body>

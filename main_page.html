@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xyz</title>
     <style>
+        body{
+            background-color: #278783;
+            margin: 0%;
+        }
+        .logo{
+            color: white;
+        }
         .navbar {
             display: flex;
-            background-color: yellow;
+            background-color: #683A46;
             height: 70px;
             flex-direction: column;
             justify-content: center;
@@ -31,7 +38,8 @@
 
         .searchbar {
             display: flex;
-
+            gap: 5px;
+            /* height: 20%; */
         }
 
         /* This is css for main display slide show */
@@ -41,9 +49,25 @@
             overflow: hidden;
         }
 
+        /*Trial Code*/
+
+        .overlay-text {
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            color: black;
+            padding: 20px 30px;
+        }
+
+        /**/
+
         .move {
             display: flex;
             height: 510px;
+            z-index: 1;
             animation: disani 35s linear infinite;
         }
 
@@ -56,18 +80,19 @@
                 transform: translateX(-50%);
             }
         }
-        /* This is for the main content */
-        .mainccontent {
-            display: flex;
 
+        /* This is for the main content */
+        .maincontent {
             width: 100%;
         }
 
         .content {
             display: flex;
             height: 250px;
-            background-color: paleturquoise;
+            background-color: #FFEBD0;
             flex-direction: column;
+            padding: 10px 10px 10px 10px;
+            margin-bottom: 20px;
         }
 
         .separater {
@@ -75,29 +100,187 @@
             height: 20px;
         }
 
-        .up{
+        .up {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            height: 85%;
         }
 
-        .b2{
-            width: 35%;
+        /* Thhis is for the text animation */
+        .b1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: #f0f8ff; */
+            padding: 100px;
+            max-width: 50%;
+            max-height: 100px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .b1 p {
+            position: absolute;
+            bottom: -100%;
+            animation: floatUp 10s ease-in-out infinite;
+            white-space: normal;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100%);
+                opacity: 0.2;
+            }
+
+            5% {
+                opacity: 0.4;
+            }
+
+            10% {
+                opacity: 0.6;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            45% {
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(50%);
+                opacity: 1;
+            }
+
+            55% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 0.8;
+            }
+
+            80% {
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        }
+
+
+
+
+        /* end of text animationn*/
+        .b2 {
+            display: flex;
+            max-width: 50%;
             height: 180px;
             overflow: hidden;
         }
 
-        .b1{
-            width: 25%;
-            height: 180px;
-            background-color: aliceblue;
-
+        .imgholder {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: disani 15s linear infinite;
         }
-        .b1:first-child{
+
+        .imgholder img {
+            width: auto;
+            height: 100%;
+        }
+
+
+        .dw {
+            display: flex;
+            justify-content: flex-end;
+            /* height: 15%;
+            width: 100%; */
+            padding-top: 10px;
+        }
+
+        .navi {
+            font-weight: 700;
+            padding: 8px 45px;
+            background-color: #A0430A;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navi:hover {
+            background-color: #333;
+        }
+
+        /* This part is for main menu */
+
+        .menubar {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu {
+            position: absolute;
+            top: 100%;
+            /* right below the navbar */
+            left: 0;
+            right: 75%;
+            background: white;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            max-height: 0;
+            gap: 10px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .enlargemenu {
+            max-height: 300px;
+        }
+
+        .menu span {
+            /* padding: 10px; */
+            cursor: pointer;
+        }
+
+        .menu span:hover {
+            background-color: #eee;
+        }
+
+        /* end of menu */
+
+        /* For the footer section */
+        .footer {
             display: flex;
             justify-content: center;
-            align-items: center;
+            gap:30px;
+            background-color: #57370D;
+            color: white;
+            flex-wrap: wrap;
+            padding-bottom: 30px;
         }
-        
+
+        .items {
+            display: flex;
+            flex-direction: column;
+            font-size: larger;
+        }
+
+        .sub {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sub:hover {
+            color: aquamarine;
+        }
     </style>
 </head>
 
@@ -114,27 +297,31 @@
                 </div>
             </div>
             <div class="bottom">
-                <div class="menu">
-                    <span>Me</span>
-                    <span>A</span>
-                    <span>B</span>
-                    <span>C</span>
-                    <span>D</span>
-                    <span>E</span>
-                    <span>F</span>
-                    <span>G</span>
-                    <span>H</span>
-                    <span>I</span>
-                    <span>J</span>
+                <div class="menubar">
+                    <button class="showmenu" id="sm">|||</button>
+                    <div class="menu" id="me">
+                        <span>Me</span>
+                        <span>A</span>
+                        <span>B</span>
+                        <span>C</span>
+                        <span>D</span>
+                        <span>E</span>
+                        <span>F</span>
+                        <span>G</span>
+                        <span>H</span>
+                        <span>I</span>
+                        <span>J</span>
+                    </div>
                 </div>
+
                 <div class="searchbar">
                     <input type="text" class="search" placeholder="Search for products...">
                     <div class="mini">
                         <button class="sbc" id="mic">
-                            M
+                            🎤
                         </button>
                         <button class="sbc" id="mag">
-                            S
+                            🔍
                         </button>
                     </div>
                 </div>
@@ -142,6 +329,10 @@
 
         </div>
         <div class="display">
+            <div class="overlay-text">
+                <h1>Welcome to Maketify</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolorum numquam nemo. Nisi voluptate excepturi ut nesciunt maxime adipisci dicta cumque unde error, asperiores eum fugit iure beatae odio ullam cum, sapiente accusamus! Perspiciatis, qui voluptatum! Ipsa quidem magni labore aut, enim rem suscipit numquam eligendi similique, omnis distinctio laborum.</p>
+            </div>
             <div class="move">
                 <div class="disitem"><img src="dummy/WhatsApp Image 2025-04-12 at 21.49.58.jpeg" alt=""></div>
                 <div class="disitem"><img src="dummy/WhatsApp Image 2025-04-12 at 21.50.11.jpeg" alt=""></div>
@@ -154,50 +345,168 @@
         <div class="maincontent">
             <div class="content">
                 <div class="up">
-                    <div class="b1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facere cum! Eos quod fuga, velit ullam minus iste aut! Aliquid!</p></div>
-                    <div class="b2"> <img src="dummy/dumb/image.png" alt=""> </div>
+                    <div class="b1">
+                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique amet consequuntur dicta
+                            sequi aspernatur totam nulla iste, deserunt temporibus cumque ipsam neque. Culpa minima
+                            fugit illo quibusdam hic vero in ipsa quidem harum maiores est eligendi dolor porro beatae
+                            repellat reiciendis provident dicta, officiis alias blanditiis recusandae quae mollitia?
+                            Nisi perspiciatis non quidem et recusandae sint, autem illo vel modi quisquam fuga accusamus
+                            eos ab vero sequi? Omnis, quos suscipit. Voluptas, nostrum voluptatum repellendus harum id
+                            eum blanditiis distinctio dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eum, facere cum! Eos quod fuga,
+                            velit ullam minus iste aut! Aliquid!
+                        </p>
+                    </div>
+                    <div class="b2">
+                        <div class="imgholder">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.25.jpeg" alt="">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.26 (1).jpeg" alt="">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.26 (2).jpeg" alt="">
+                            <img src="dummy/dumb/image.png" alt="">
+                        </div>
+                    </div>
                 </div>
                 <div class="dw"><button class="navi">Show Details> </button></div>
             </div>
             <div class="separater"></div>
             <div class="content">
                 <div class="up">
-                    <div class="b2"> <img src="dummy/dumb/istockphoto-512150982-612x612.jpg" alt=""> </div>
-                    <div class="b1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facere cum! Eos quod fuga, velit ullam minus iste aut! Aliquid!</p></div>
+                    <div class="b2">
+                        <div class="imgholder">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.26.jpeg" alt="">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.27 (1).jpeg" alt="">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.27.jpeg" alt="">
+                            <img src="dummy/dumb/istockphoto-512150982-612x612.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="b1">
+                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique amet consequuntur dicta
+                            sequi aspernatur totam nulla iste, deserunt temporibus cumque ipsam neque. Culpa minima
+                            fugit illo quibusdam hic vero in ipsa quidem harum maiores est eligendi dolor porro beatae
+                            repellat reiciendis provident dicta, officiis alias blanditiis recusandae quae mollitia?
+                            Nisi perspiciatis non quidem et recusandae sint, autem illo vel modi quisquam fuga accusamus
+                            eos ab vero sequi? Omnis, quos suscipit. Voluptas, nostrum voluptatum repellendus harum id
+                            eum blanditiis distinctio dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eum, facere cum! Eos quod fuga,
+                            velit ullam minus iste aut! Aliquid!
+                        </p>
+                    </div>
+                </div>
+                <div class="dw"><button class="navi">Show Details > </button></div>
+            </div>
+            <div class="separater"></div>
+            <div class="content">
+                <div class="up">
+                    <div class="b1">
+                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique amet consequuntur dicta
+                            sequi aspernatur totam nulla iste, deserunt temporibus cumque ipsam neque. Culpa minima
+                            fugit illo quibusdam hic vero in ipsa quidem harum maiores est eligendi dolor porro beatae
+                            repellat reiciendis provident dicta, officiis alias blanditiis recusandae quae mollitia?
+                            Nisi perspiciatis non quidem et recusandae sint, autem illo vel modi quisquam fuga accusamus
+                            eos ab vero sequi? Omnis, quos suscipit. Voluptas, nostrum voluptatum repellendus harum id
+                            eum blanditiis distinctio dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eum, facere cum! Eos quod fuga,
+                            velit ullam minus iste aut! Aliquid!</p>
+                    </div>
+                    <div class="b2">
+                        <div class="imgholder">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.28 (1).jpeg" alt="">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.28 (2).jpeg" alt="">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.28.jpeg" alt="">
+                            <img src="dummy/dumb/istockphoto-598058914-612x612.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
                 <div class="dw"><button class="navi">Show Details> </button></div>
             </div>
             <div class="separater"></div>
             <div class="content">
                 <div class="up">
-                    <div class="b1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facere cum! Eos quod fuga, velit ullam minus iste aut! Aliquid!</p></div>
-                    <div class="b2"> <img src="dummy/dumb/istockphoto-598058914-612x612.jpg" alt=""> </div>
+                    <div class="b2">
+                        <div class="imgholder">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.29 (1).jpeg" alt="">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.29.jpeg" alt="">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.30 (1).jpeg" alt="">
+                            <img src="dummy/dumb/romantic-tunnel-pink-flower-trees-falling-petal-over-blossom-tree-over-nature-background-spring-season-flowers-93135462.webp"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="b1">
+                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique amet consequuntur dicta
+                            sequi aspernatur totam nulla iste, deserunt temporibus cumque ipsam neque. Culpa minima
+                            fugit illo quibusdam hic vero in ipsa quidem harum maiores est eligendi dolor porro beatae
+                            repellat reiciendis provident dicta, officiis alias blanditiis recusandae quae mollitia?
+                            Nisi perspiciatis non quidem et recusandae sint, autem illo vel modi quisquam fuga accusamus
+                            eos ab vero sequi? Omnis, quos suscipit. Voluptas, nostrum voluptatum repellendus harum id
+                            eum blanditiis distinctio dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eum, facere cum! Eos quod fuga,
+                            velit ullam minus iste aut! Aliquid!</p>
+                    </div>
                 </div>
                 <div class="dw"><button class="navi">Show Details> </button></div>
             </div>
             <div class="separater"></div>
             <div class="content">
                 <div class="up">
-                    <div class="b2"> <img
-                            src="dummy/dumb/romantic-tunnel-pink-flower-trees-falling-petal-over-blossom-tree-over-nature-background-spring-season-flowers-93135462.webp"
-                            alt=""> </div>
-                    <div class="b1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facere cum! Eos quod fuga, velit ullam minus iste aut! Aliquid!</p></div>
-                </div>
-                <div class="dw"><button class="navi">Show Details> </button></div>
-            </div>
-            <div class="separater"></div>
-            <div class="content">
-                <div class="up">
-                    <div class="b1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, facere cum! Eos quod fuga, velit ullam minus iste aut! Aliquid!</p></div>
-                    <div class="b2"> <img
-                            src="dummy/dumb/tree-branches-with-white-flowers-and-bright-background-free-photo.jpg"
-                            alt=""> </div>
+                    <div class="b1">
+                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique amet consequuntur dicta
+                            sequi aspernatur totam nulla iste, deserunt temporibus cumque ipsam neque. Culpa minima
+                            fugit illo quibusdam hic vero in ipsa quidem harum maiores est eligendi dolor porro beatae
+                            repellat reiciendis provident dicta, officiis alias blanditiis recusandae quae mollitia?
+                            Nisi perspiciatis non quidem et recusandae sint, autem illo vel modi quisquam fuga accusamus
+                            eos ab vero sequi? Omnis, quos suscipit. Voluptas, nostrum voluptatum repellendus harum id
+                            eum blanditiis distinctio dolor! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eum, facere cum! Eos quod fuga,
+                            velit ullam minus iste aut! Aliquid!</p>
+                    </div>
+                    <div class="b2">
+                        <div class="imgholder">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.30 (2).jpeg" alt="">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.30.jpeg" alt="">
+                            <img src="dummy/drum/WhatsApp Image 2025-04-13 at 20.28.31.jpeg" alt="">
+                            <img src="dummy/dumb/tree-branches-with-white-flowers-and-bright-background-free-photo.jpg"
+                                alt="">
+                        </div>
+                    </div>
                 </div>
                 <div class="dw"><button class="navi">Show Details> </button></div>
             </div>
             <div class="separater"></div>
         </div>
+        <div class="separater"></div>
+        <div class="footer">
+            <div class="items">
+                <h4 class="itemname">About</h4>
+                <a href="" class="sub">Introduction of our website</a>
+                <a href="" class="sub">adadadad</a>
+                <a href="" class="sub">adddadadad</a>
+            </div>
+            <div class="items">
+                <h4 class="itemname">Connect With Us</h4>
+                <a href="" class="sub">fghfghfghg</a>
+                <a href="" class="sub">cbcvvbvbb</a>
+                <a href="" class="sub">bcbvbcfdg</a>
+            </div>
+            <div class="items">
+                <h4 class="itemname">Help</h4>
+                <a href="" class="sub">gfrgweiurg</a>
+                <a href="" class="sub">hvshfgsrhgk</a>
+                <a href="" class="sub">hdjdhsdhkjshfgskjhddjkg</a>
+            </div>
+            <div class="items">
+                <h4 class="itemname">FAQ</h4>
+                <a href="" class="sub">kjudfhoshseohfoieh</a>
+                <a href="" class="sub">juafdgugfuiewgfuwg</a>
+                <a href="" class="sub">hidjopjdpwqjpdjwqi</a>
+            </div>
+        </div>
     </div>
+
+    <script>
+        document.getElementById("sm").addEventListener("click", function (event) {
+            document.getElementById("me").classList.toggle("enlargemenu");
+        })
+    </script>
 </body>
 
 </html>

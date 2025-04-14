@@ -3,9 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xyz</title>
+    <title>Login Page</title>
+    <style>
+        *{
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #EEE8AA;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: #FFFFFF;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px #000000(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+      text-align: center;
+      color: black;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #333;
+      border-radius: 8px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #BDB76B;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .login-container button:hover {
+      background-color: #FFE4B5;
+    }
+
+    .forgot-password {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .forgot-password a {
+      color: #BDB76B;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #BDB76B;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    </style>
 </head>
 <body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="#" method="POST">
+          <input type="text" placeholder="Email or Mobile Number" name="email_or_phone" required />
+          <input type="password" placeholder="Password" name="password" required />
+          <button type="submit">Log In</button>
+        </form>
+        <div class="forgot-password">
+          <a href="#">Forgot password?</a>
+        </div>
+        <div class="footer">
+          <p>Don't have an account? <a href="#">Sign up</a>
+        </p>
+        </div>
+      </div>
     
 </body>
 </html>

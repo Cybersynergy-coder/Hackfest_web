@@ -7,7 +7,7 @@
     <title>xyz</title>
     <style>
         body{
-            background-color: #278783;
+            background-color: #D8BFD8;/*278783 | 37d9d2 | E6E6FA*/
             margin: 0%;
         }
         .logo{
@@ -15,7 +15,7 @@
         }
         .navbar {
             display: flex;
-            background-color: #683A46;
+            background-color: #bd6a80;/*683A46*/
             height: 70px;
             flex-direction: column;
             justify-content: center;
@@ -89,7 +89,7 @@
         .content {
             display: flex;
             height: 250px;
-            background-color: #FFEBD0;
+            background-color: #E6E6FA;/*FFEBD0 | FFFACD*/
             flex-direction: column;
             padding: 10px 10px 10px 10px;
             margin-bottom: 20px;
@@ -208,7 +208,7 @@
         .navi {
             font-weight: 700;
             padding: 8px 45px;
-            background-color: #A0430A;
+            background-color: #bd6a80;
             color: white;
             border: none;
             cursor: pointer;
@@ -292,8 +292,8 @@
                     LOGO<img src="" alt="" class="l">
                 </div>
                 <div class="opt">
-                    <button>Login</button>
-                    <button>Sign Up</button>
+                    <button id="lg">Login</button>
+                    <button id="su">Sign Up</button>
                 </div>
             </div>
             <div class="bottom">
@@ -366,7 +366,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="dw"><button class="navi">Show Details> </button></div>
+                <div class="dw"><button class="navi" id="ca1">Show Details> </button></div>
             </div>
             <div class="separater"></div>
             <div class="content">
@@ -392,7 +392,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="dw"><button class="navi">Show Details > </button></div>
+                <div class="dw"><button class="navi" id="ca2">Show Details > </button></div>
             </div>
             <div class="separater"></div>
             <div class="content">
@@ -417,7 +417,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="dw"><button class="navi">Show Details> </button></div>
+                <div class="dw"><button class="navi" id="ca3">Show Details> </button></div>
             </div>
             <div class="separater"></div>
             <div class="content">
@@ -443,7 +443,7 @@
                             velit ullam minus iste aut! Aliquid!</p>
                     </div>
                 </div>
-                <div class="dw"><button class="navi">Show Details> </button></div>
+                <div class="dw"><button class="navi" id="ca4">Show Details> </button></div>
             </div>
             <div class="separater"></div>
             <div class="content">
@@ -469,7 +469,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="dw"><button class="navi">Show Details> </button></div>
+                <div class="dw"><button class="navi" id="ca5">Show Details> </button></div>
             </div>
             <div class="separater"></div>
         </div>
@@ -505,6 +505,31 @@
     <script>
         document.getElementById("sm").addEventListener("click", function (event) {
             document.getElementById("me").classList.toggle("enlargemenu");
+        })
+
+        document.getElementById("lg").addEventListener("click", function(event) {
+            window.location.href = "login"
+        })
+
+        document.getElementById("su").addEventListener("click", function(event) {
+            window.location.href = "signup"
+        })
+
+        //Window opener for the catagory pages
+        document.getElementById("ca1").addEventListener("click", function(event) {
+            window.location.href = "cat_page1"
+        })
+        document.getElementById("ca2").addEventListener("click", function(event) {
+            window.location.href = "cat_page2"
+        })
+        document.getElementById("ca3").addEventListener("click", function(event) {
+            window.location.href = "cat_page3"
+        })
+        document.getElementById("ca4").addEventListener("click", function(event) {
+            window.location.href = "cat_page4"
+        })
+        document.getElementById("ca5").addEventListener("click", function(event) {
+            window.location.href = "cat_page5"
         })
     </script>
 </body>
